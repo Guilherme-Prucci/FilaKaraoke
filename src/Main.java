@@ -15,6 +15,7 @@ public class Main {
 
         //a lista que iremos iterar para chamar a proxima musica ou procurar CPF;
         ArrayList<Pessoa> pessoas = new ArrayList<>();
+        ArrayList<Request> cantadas = new ArrayList<>();
         ArrayList<Request> requests = new ArrayList<>();
 
         while(digitado != 3) {
@@ -31,13 +32,8 @@ public class Main {
                    pessoas =  OrganizadorListas.VerificacaoCadastro(pessoas);
                     break;
                 case 2:
-<<<<<<< Updated upstream
-                    LeitorArquivos.atualizarPedidos();
-
-=======
                     //adiciona todas as musicas independente de repetição
                     requests = OrganizadorListas.AdicionarMusicas(requests);
->>>>>>> Stashed changes
                     break;
                 case 3:
                     GeradorRelatorio.GerarRelatorio(requests);
