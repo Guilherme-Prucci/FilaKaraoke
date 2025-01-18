@@ -23,6 +23,7 @@ public class OrganizadorListas {
             if (!CPFrepetido){
                 lista.add(verificar);
             }
+            CPFrepetido = false;
         }
 
         //retornamos a lista completa com os cpf nao repetidos do txt adicionados
