@@ -10,6 +10,11 @@ public class GeradorRelatorio {
 
 
     public static void GerarRelatorio(ArrayList<Request> lista) {
+        int horas, minutos, segundos;
+        String minutoString, segundoString;
+        for(Request musica : lista){
+            musica.getDuracao();
+        }
         try{
                 BufferedWriter saida = new BufferedWriter(new FileWriter("Arquivos/Relatorio.txt"));
                 saida.write("alo mundo");
