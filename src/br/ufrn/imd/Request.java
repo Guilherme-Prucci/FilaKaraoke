@@ -51,7 +51,7 @@ public class Request {
     // Método toString para facilitar a exibição de informações
     @Override
     public String toString() {
-        return "Request [Pessoa: " + pessoa.getNomeCompleto() + 
+        return "Request [Pessoa: " + pessoa.getNome() + 
                ", Título: " + titulo + 
                ", Estilo: " + estilo + 
                ", Duração: " + duracao + "]";

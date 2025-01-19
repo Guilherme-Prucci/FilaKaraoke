@@ -1,7 +1,10 @@
 package br.ufrn.imd;
 
+<<<<<<< Updated upstream
 //classe de PESSOA para cadastrar e permitir repetição de nome mas nao de cpf;
 //Atributos de Pessoa
+=======
+>>>>>>> Stashed changes
 public class Pessoa {
     private String primeiroNome;
     private String segundoNome;
@@ -10,6 +13,7 @@ public class Pessoa {
     private String cpf;
     private String genero;
     private String profissao;
+<<<<<<< Updated upstream
     private String data_de_chegada; //adicionar tratamento da data_de_chegada
 
     //Método que contrói um novo objeto do tipo Pessoa com os seguintes parâmetros
@@ -20,6 +24,15 @@ public class Pessoa {
         this.genero = genero;
         this.profissao = profissao;
         this.data_de_chegada = data_de_chegada;
+=======
+
+    public Pessoa(String nome, int idade, String cpf, String genero, String profissao) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+        this.genero = genero;
+        this.profissao = profissao;
+>>>>>>> Stashed changes
     }
 
     //Método que retorna o nome completo
@@ -27,6 +40,7 @@ public class Pessoa {
         return primeiroNome + " " + segundoNome + " " + terceiroNome;
     }
 
+<<<<<<< Updated upstream
     //Setters dos nomes
     public String getPrimeiroNome(){
         return primeiroNome;
@@ -51,10 +65,25 @@ public class Pessoa {
         }
     }
     
+=======
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+>>>>>>> Stashed changes
     public String getCpf() {
         return cpf;
     }
 
+<<<<<<< Updated upstream
     //Método para tratar o nome
     public void setNome(String nomeCompleto) {
         // Separa o nome em 3 partes
@@ -74,4 +103,25 @@ public class Pessoa {
         return "Pessoa [Nome: " + getNomeCompleto() + ", Idade: " + idade + ", CPF: " + cpf + ", Gênero: " + genero + ", Profissão: " + profissao + ", Data de Chegada: " + data_de_chegada + "]";
     }
     
+=======
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
+>>>>>>> Stashed changes
 }
