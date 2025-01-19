@@ -27,12 +27,12 @@ public class SalvaArquivos {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("Arquivos/Pedidos.txt", false))) {
             for (Request request : requests) {
                 Pessoa pessoa = buscarPessoaPorCpf(request.getPessoa().getCpf(), pessoas);
-    
+
                 if (pessoa == null) {
                     System.err.println("Erro: Pessoa com CPF " + request.getPessoa().getCpf() + " não encontrada!");
                     continue;
                 }
-    
+
                 writer.write(pessoa.getCpf() + "," +
                              pessoa.getNome() + "," +
                              pessoa.getGenero() + "," +
@@ -47,7 +47,6 @@ public class SalvaArquivos {
             System.err.println("Erro ao salvar pedidos: " + e.getMessage());
         }
     }
-    
 
     private static Pessoa buscarPessoaPorCpf(String cpf, ArrayList<Pessoa> pessoas) {
         for (Pessoa pessoa : pessoas) {

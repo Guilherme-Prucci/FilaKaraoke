@@ -51,39 +51,38 @@ public class OrganizadorListas {
 
     public static ArrayList<Request> AdicionarMusicas(ArrayList<Request> lista, ArrayList<Pessoa> pessoas) {
         Scanner scanner = new Scanner(System.in);
-    
+
         System.out.println("Deseja adicionar uma nova música? (s/n)");
         String resposta = scanner.nextLine();
-    
+
         while (resposta.equalsIgnoreCase("s")) {
             System.out.println("Digite o CPF da pessoa que solicitou:");
             String cpf = scanner.nextLine();
-    
+
             Pessoa pessoa = buscarPessoaPorCpf(cpf, pessoas);
             if (pessoa == null) {
                 System.out.println("CPF não encontrado no cadastro. Cadastre a pessoa primeiro.");
                 break;
             }
-    
+
             System.out.println("Digite o nome da música:");
             String nomeMusica = scanner.nextLine();
-    
+
             System.out.println("Digite o estilo da música:");
             String estilo = scanner.nextLine();
-    
+
             System.out.println("Digite a duração da música (formato mm:ss):");
             String duracao = scanner.nextLine();
-    
+
             lista.add(new Request(pessoa, estilo, duracao, nomeMusica));
             System.out.println("Música adicionada com sucesso!");
-    
+
             System.out.println("Deseja adicionar outra música? (s/n)");
             resposta = scanner.nextLine();
         }
-    
+
         return lista;
     }
-    
 
     private static Pessoa buscarPessoaPorCpf(String cpf, ArrayList<Pessoa> pessoas) {
         for (Pessoa pessoa : pessoas) {
