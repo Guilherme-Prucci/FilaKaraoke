@@ -1,0 +1,4 @@
+O testador,22,12345678989,Unknown,Testador
+11952907489,Victor,Masculino,Estudante,Brega,10:10,Saga de um Vaqueiro
+11952907489,Victor,Masculino,Estudante,brega,05:05,Rei do gado
+11952907489,Victor,Masculino,Estudante,KPOP,03:35,Ddaeng

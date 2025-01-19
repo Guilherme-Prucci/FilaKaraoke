@@ -1,3 +1,1 @@
-Victor Costa,26,11952907489,Masculino,Estudante
-Simone Costa Medeiros Ribeiro,65,36901644434,Feminino,Aposentada
-Joaquim Ribeiro Neto,66,70486582104,Masculino,Minerador
+Victor,26,11952907489,Masculino,Estudante

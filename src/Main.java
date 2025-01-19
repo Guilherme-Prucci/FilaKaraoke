@@ -49,7 +49,10 @@ public class Main {
                     SalvaArquivos.salvarPedidos(requests, pessoas);  // Passando a lista de pessoas
                     System.out.println("Cadastros atualizados com sucesso!");
                     break;
-                //case 3: 
+                case 3:
+                SalvaArquivos.salvarTocadas(requests, pessoas); // Chamando o método para salvar as tocadas e remover a linha
+                System.out.println("Saindo");
+                break;
                 case 4:
                     GeradorRelatorio.GerarRelatorio(requests);
                     System.out.println("Saindo");
