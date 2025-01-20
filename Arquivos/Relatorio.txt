@@ -1,18 +1,31 @@
-O tempo total de musica é 0:26:50
+O tempo total de musica é 1:40:34
 
 Os estilos de musica escolhida e o tempo cantado:
-ROCK -> 6:00
+ROCK -> 42:24
 KPOP -> 3:35
-SERTANEJO -> 2:00
+SERTANEJO -> 24:47
 BREGA -> 15:15
+MPB -> 14:33
 
 Tempo cantado por CPF:
 11952907489 -> 18:50
-11400612403 -> 8:00
+11400612403 -> 43:24
+12345678900 -> 38:20
 
 musicas escolhida:
 REI DO GADO -> 1
 CHORANDO -> 1
 STARLIGHT -> 2
-DDAENG -> 1
+EVIDENCIAS -> 3
+ROCK -> 3
+ROCK1 -> 3
+MENINO DA PORTEIRA -> 1
+ROCK2 -> 2
+MUSICA -> 2
+CHOP SUEY -> 3
+MUSICA3 -> 1
+MUSICA2 -> 4
+MUSICA1 -> 3
 SAGA DE UM VAQUEIRO -> 1
+MUSICAMINHA -> 1
+DDAENG -> 1

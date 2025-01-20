@@ -35,5 +35,18 @@ public class LeitorArquivos {
         }
         return tocadas;
     }
+
+    public static ArrayList<String> VerPedidos() {
+        ArrayList<String> pedidos = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader("Arquivos/Pedidos.txt"))) {
+            String linha;
+            while ((linha = reader.readLine()) != null) {
+                pedidos.add(linha);
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo Pedidos.txt: " + e.getMessage());
+        }
+        return pedidos;
+    }
     
 }
