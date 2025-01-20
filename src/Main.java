@@ -1,9 +1,13 @@
-package br.ufrn.imd;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+
+import br.ufrn.imd.GeradorRelatorio;
+import br.ufrn.imd.OrganizadorListas;
+import br.ufrn.imd.Pessoa;
+import br.ufrn.imd.Request;
+import br.ufrn.imd.SalvaArquivos;
 
 
 
@@ -13,29 +17,43 @@ public class Main {
         int digitado = 0;
         Scanner scanner = new Scanner(System.in);
 
-        //a lista que iremos iterar para chamar a proxima musica ou procurar CPF;
+        //a lista que iremos iterar para chamar a próxima música ou procurar CPF;
         ArrayList<Pessoa> pessoas = new ArrayList<>();
         ArrayList<Request> cantadas = new ArrayList<>();
         ArrayList<Request> requests = new ArrayList<>();
 
-        while(digitado != 3) {
+        while(digitado != 4) {
             System.out.println("Digite 1 para atualizar os cadastros,");
             System.out.println("Digite 2 para atualizar os pedidos,");
-            System.out.println("Digite 3 para sair.");
+            System.out.println("Digite 3 para ver próxima música,");
+            System.out.println("Digite 4 para gerar relatório e sair.");
 
-            digitado = scanner.nextInt();
+            try {
+                digitado = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor, digite um número válido.");
+                digitado = 0; // Reinicia a variável para não sair do loop.
+            }            
 
 
             switch (digitado) {
                 case 1:
-                    //adiciona pessoas apenas se o cpf não é repetido
-                   pessoas =  OrganizadorListas.VerificacaoCadastro(pessoas);
+                    // Atualiza os cadastros e salva no arquivo
+                    pessoas = OrganizadorListas.VerificacaoCadastro(pessoas);
+                    SalvaArquivos.salvarCadastros(pessoas);
+                    System.out.println("Cadastros atualizados com sucesso!");
                     break;
                 case 2:
-                    //adiciona todas as musicas independente de repetição
-                    requests = OrganizadorListas.AdicionarMusicas(requests);
+                    // Atualiza os pedidos e salva no arquivo
+                    requests = OrganizadorListas.AdicionarMusicas(requests, pessoas);  // Passando a lista de pessoas
+                    SalvaArquivos.salvarPedidos(requests, pessoas);  // Passando a lista de pessoas
+                    System.out.println("Cadastros atualizados com sucesso!");
                     break;
                 case 3:
+                SalvaArquivos.salvarTocadas(requests, pessoas); // Chamando o método para salvar as tocadas e remover a linha
+                System.out.println("Saindo");
+                break;
+                case 4:
                     GeradorRelatorio.GerarRelatorio(requests);
                     System.out.println("Saindo");
                     break;
