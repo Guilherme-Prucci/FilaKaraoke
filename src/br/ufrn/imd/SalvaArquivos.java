@@ -7,7 +7,7 @@ public class SalvaArquivos {
 
     // Método para salvar a lista de pessoas no arquivo Cadastro.txt
     public static void salvarCadastros(ArrayList<Pessoa> pessoas) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Arquivos/Cadastro.txt", false))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Arquivos/Cadastro.txt", true))) {
             for (Pessoa pessoa : pessoas) {
                 writer.write(pessoa.getNome() + "," +
                              pessoa.getIdade() + "," +
@@ -35,6 +35,7 @@ public class SalvaArquivos {
 
                 writer.write(pessoa.getCpf() + "," +
                              pessoa.getNome() + "," +
+                             pessoa.getIdade() + "," +
                              pessoa.getGenero() + "," +
                              pessoa.getProfissao() + "," +
                              request.getTitulo() + "," +
@@ -49,7 +50,7 @@ public class SalvaArquivos {
     }
 
     // Método para salvar a primeira linha de Cadastro.txt em Tocadas.txt e remover a primeira linha de Pedidos.txt
-    public static void salvarTocadas(ArrayList<Request> requests, ArrayList<Pessoa> pessoas) {
+    public static void salvarTocadas(ArrayList<Request> requests, ArrayList<Pessoa> pessoas, ArrayList<Request> cantadas) {
         try {
             // Verifica se há pedidos na lista
             if (requests.isEmpty()) {
@@ -85,6 +86,7 @@ public class SalvaArquivos {
             System.out.println("Primeiro pedido salvo em Tocadas.txt: " + linha);
     
             // Remove a primeira linha da lista de pedidos e atualiza o arquivo Pedidos.txt
+            cantadas.add(requests.get(0));
             requests.remove(0);
             atualizarPedidos(requests);
     

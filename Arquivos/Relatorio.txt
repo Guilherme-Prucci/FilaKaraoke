@@ -1,1 +1,18 @@
-alo mundo
+O tempo total de musica é 0:26:50
+
+Os estilos de musica escolhida e o tempo cantado:
+ROCK -> 6:00
+KPOP -> 3:35
+SERTANEJO -> 2:00
+BREGA -> 15:15
+
+Tempo cantado por CPF:
+11952907489 -> 18:50
+11400612403 -> 8:00
+
+musicas escolhida:
+REI DO GADO -> 1
+CHORANDO -> 1
+STARLIGHT -> 2
+DDAENG -> 1
+SAGA DE UM VAQUEIRO -> 1

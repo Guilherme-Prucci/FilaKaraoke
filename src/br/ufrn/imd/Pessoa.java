@@ -54,4 +54,6 @@ public class Pessoa {
     public void setProfissao(String profissao) {
         this.profissao = profissao;
     }
+
+
 }

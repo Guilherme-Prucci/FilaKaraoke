@@ -3,13 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import br.ufrn.imd.GeradorRelatorio;
-import br.ufrn.imd.OrganizadorListas;
-import br.ufrn.imd.Pessoa;
-import br.ufrn.imd.Request;
-import br.ufrn.imd.SalvaArquivos;
-
-
+import br.ufrn.imd.*;
 
 
 public class Main {
@@ -18,7 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //a lista que iremos iterar para chamar a próxima música ou procurar CPF;
-        ArrayList<Pessoa> pessoas = new ArrayList<>();
+        ArrayList<Pessoa> pessoas = LeitorArquivos.atualizarCadastros();
         ArrayList<Request> cantadas = new ArrayList<>();
         ArrayList<Request> requests = new ArrayList<>();
 
@@ -50,11 +44,11 @@ public class Main {
                     System.out.println("Cadastros atualizados com sucesso!");
                     break;
                 case 3:
-                SalvaArquivos.salvarTocadas(requests, pessoas); // Chamando o método para salvar as tocadas e remover a linha
+                SalvaArquivos.salvarTocadas(requests, pessoas, cantadas); // Chamando o método para salvar as tocadas e remover a linha
                 System.out.println("Saindo");
                 break;
                 case 4:
-                    GeradorRelatorio.GerarRelatorio(requests);
+                    GeradorRelatorio.GerarRelatorio(LeitorArquivos.VerTocadas());
                     System.out.println("Saindo");
                     break;
                 default:

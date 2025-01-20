@@ -8,35 +8,32 @@ import java.util.ArrayList;
 public class LeitorArquivos {
 
     // Método que atualiza cadastros a partir do arquivo Cadastro
-    public static Pessoa[] atualizarCadastros() {
+    public static ArrayList<Pessoa> atualizarCadastros() {
     ArrayList<Pessoa> pessoas = new ArrayList<>();
     try (BufferedReader reader = new BufferedReader(new FileReader("Arquivos/Cadastro.txt"))) {
         String linha;
         while ((linha = reader.readLine()) != null) {
             String[] dados = linha.split(",");
-            Pessoa pessoa = new Pessoa(dados[0], Integer.parseInt(dados[1]), dados[2], linha, linha);
+            Pessoa pessoa = new Pessoa(dados[0], Integer.parseInt(dados[1]), dados[2], dados[3], dados[4]);
             pessoas.add(pessoa);
         }
     } catch (IOException e) {
         System.err.println("Erro ao ler o arquivo Cadastro.txt: " + e.getMessage());
     }
-    return pessoas.toArray(new Pessoa[0]);
+    return pessoas;
     }
 
-    public static Request[] atualizarPedidos() {
-        ArrayList<Request> requests = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("Arquivos/Pedidos.txt"))) {
+    public static ArrayList<String> VerTocadas() {
+        ArrayList<String> tocadas = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader("Arquivos/Tocadas.txt"))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
-                String[] dados = linha.split(",");
-                Pessoa pessoa = new Pessoa("", 0, dados[0], linha, linha); // Cria uma pessoa apenas com o CPF
-                Request request = new Request(pessoa, dados[1], dados[2], dados[3]);
-                requests.add(request);
+                tocadas.add(linha);
             }
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo Pedidos.txt: " + e.getMessage());
         }
-        return requests.toArray(new Request[0]);
+        return tocadas;
     }
     
 }

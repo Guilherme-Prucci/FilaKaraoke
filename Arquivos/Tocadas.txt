@@ -1,4 +1,6 @@
-O testador,22,12345678989,Unknown,Testador
 11952907489,Victor,Masculino,Estudante,Brega,10:10,Saga de um Vaqueiro
 11952907489,Victor,Masculino,Estudante,brega,05:05,Rei do gado
 11952907489,Victor,Masculino,Estudante,KPOP,03:35,Ddaeng
+11400612403,Guilherme Prucci Souza Rocha,Masculino,Tecnico Informatica,Rock,3:00,Starlight
+11400612403,Guilherme Prucci Souza Rocha,Masculino,Tecnico Informatica,sertanejo,2:00,chorando
+11400612403,Guilherme Prucci Souza Rocha,Masculino,Tecnico Informatica,rock,3:00,starlight
