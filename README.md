@@ -11,7 +11,7 @@ Participantes:
   Guilherme Prucci Souza Rocha
 
 Link da Gravação do Vídeo:
-  [Inserir Aqui]
+ https://youtu.be/28WCMM2JdjY
 
 Organização do Projeto:
 
